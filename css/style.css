@@ -3,17 +3,125 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.works{
-    background-color: #101010;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 h2{
     color: #ffffff;
     font-size: 48px;
-    margin-bottom: 20px;
 }
 h4{
     color: #e9204f;
     font-size: 18px;
+    font-weight: lighter;
+}
+.works{
+    background-color: #101010;
+    padding-bottom: 140px;
+}
+.works .top-text{
+    padding: 60px 130px;
+    display: flex;
+    flex-direction: column;
+}
+.works .top-text .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.works .top-text .top a{
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px 32px;
+    border: 2px solid #e9204f;
+}
+.works .images{
+    display: flex;
+    justify-content: space-between;
+}
+.works .images .image{
+    width: 32%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.works .images .image img{
+    height: 32vw;
+    vertical-align: bottom;
+    filter: grayscale(1);
+    z-index: -1;
+    transition: .6s;
+}
+.works .images .image .image-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #ffffff;
+    background-color: #101010c0;
+    padding: 50% 40%;
+    opacity: 0;
+    text-align: center;
+    transition: .6s;
+    white-space: nowrap;
+}
+.works .images .image .image-content h3{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;;
+}
+.works .images .image .image-content p{
+    font-size: 17px;
+}
+
+.works .images .image:hover img{
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+.works .images .image:hover .image-content{
+    opacity: 1;
+}
+.works .circles{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.works .circles .container{
+    margin: 0 auto;
+}
+.works .circles .fa-circle{
+    width: 10px;
+    height: 10px;
+    font-size: 13px;
+    margin: 0 8px;
+    color: #666666;
+}
+.works .circles .fa-solid{
+    color: #e9204f;
+}
+.works .circles .fa-regular:hover{
+    color: #e9204f;
+}
+.about::before{
+    content: '';
+    background-color: #e9204f;
+    height: 60px;
+    width: 2px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+}
+.about{
+    padding-top: 140px;
+    background-color: #101010;
+    position: relative;
+}
+.about .top-text{
+    padding: 60px 130px;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    color: #acacac;
 }
